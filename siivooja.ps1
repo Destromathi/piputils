@@ -16,28 +16,38 @@ function Luo-UusiKansio {
 	return $nimi
 }
 
-function Siirra-Kuvat {
-$kuvakansio = Luo-UusiKansio 
-Write-Host "Siirretaan kuvia..."    
-	Get-ChildItem *.jpg,*.jpeg,*.png,*.heic,*.gif,*.webp,*.bmp -ErrorAction SilentlyContinue |
-	Move-Item -Destination $kuvakansio -ErrorAction SilentlyContinue
+function Siirra-Kuvat {    
+$tiedostot = Get-ChildItem *.jpg,*.jpeg,*.png,*.heic,*.gif,*.webp,*.bmp -ErrorAction SilentlyContinue
+
+if  ($tiedostot.Count -eq 0){
+	Write-Host "Ei tiedostoja siirrettavaksi" -ForegroundColor Yellow
+	return
+	}
+
+$kuvakansio = Luo-UusiKansio
 Write-Host "Siirretty kuvat"
+$tiedostot | Move-Item -Destination $kuvakansio -ErrorAction SilentlyContinue
+
 }
 
+function Siirra-Videot {    
+$tiedostot = Get-ChildItem *.mp4,*.mov,*.avi, *.mkv -ErrorAction SilentlyContinue
 
+if  ($tiedostot.Count -eq 0){
+	Write-Host "Ei videoita siirrettavaksi" -ForegroundColor Yellow
+	return
+	}
 
-function Siirra-Videot {
 $videokansio = Luo-UusiKansio
-Write-Host "Siirretaan videoita..."
-Get-ChildItem *.mp4,*.mov,*.avi,*.mkv -ErrorAction SilentlyContinue |
-	Move-Item -Destination $videokansio -ErrorAction SilentlyContinue
 Write-Host "Siirretty videot"
+$tiedostot | Move-Item -Destination $videokansio -ErrorAction SilentlyContinue
+
 }
 
 function Siirra-Musiikki {
 $musiikkikansio = Luo-UusiKansio
 Write-Host "Siirretään musiikkia..."
-Get-ChildItem *.mp3,*.wav,*.flac -ErrorAction SilentlyContinue |
+Get-ChildItem *.mp3,*.wav, *.flac -ErrorAction SilentlyContinue |
 	Move-Item -Destination $musiikkikansio -ErrorAction SilentlyContinue
 	Write-Host "Siirretty musiikit"
 }
@@ -61,13 +71,14 @@ Get-ChildItem *.xls,*.xlsx,*.csv -ErrorAction SilentlyContinue |
 
 
 Luo-Kansiot
+do {
 Write-Host "1 - Siirra Kuvat"
 Write-Host "2 - Siirra Videot"
 Write-Host "3 - Siirra Musiikki"
 Write-Host "4 - Siirra Dokumentit"
 Write-Host "5 - Siirra Data"
 Write-Host "6 - Siirra Kaikki"
-Write-Host "0 Poistu"
+Write-Host "0 - Poistu"
 $valinta = Read-Host "Valitse toiminto"
 
 switch ($valinta){
@@ -82,11 +93,11 @@ switch ($valinta){
 			Siirra-Dokumentit
 			Siirra-Data
 			}
-	"0" {exit}
-	default {Write-Host "Virheellinen valinta"}
-}
-
+	"0" {Write-Host "Ohjelma lopetetaan"}
+	default {Write-Host "Virheellinen valinta"-ForegroundColor Red}
+	}
+} while ($valinta -ne "0")
 
 Write-Host "====================================="
-Write-Host "                Valmis!               "
+Write-Host "               \,.,\ Valmis!  /,.,/              "
 Write-Host "====================================="
