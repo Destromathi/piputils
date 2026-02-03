@@ -1,0 +1,18 @@
+2026-02-03 12:42:19.622820: === Tarkistus aloitettu ===
+2026-02-03 12:42:19.687507: Prosessi käynnissä: python.exe
+2026-02-03 12:42:19.747159: Prosessi käynnissä: chrome.exe
+2026-02-03 12:42:19.797729: Prosessia ei löydy: ei_olemassa.exe
+2026-02-03 12:42:19.797978: --- YHTEENVETO ---
+2026-02-03 12:42:19.798155: Käynnissä (2): python.exe, chrome.exe
+2026-02-03 12:42:19.798311: Ei käynnissä (1): ei_olemassa.exe
+2026-02-03 12:42:19.798460: === Tarkistus päättyi ===
+
+2026-02-03 12:43:12.500759: === Tarkistus aloitettu ===
+2026-02-03 12:43:12.509978: Prosessi käynnissä: python.exe
+2026-02-03 12:43:12.510168: Prosessi käynnissä: chrome.exe
+2026-02-03 12:43:12.510321: Prosessia ei löydy: ei_olemassa.exe
+2026-02-03 12:43:12.511826: --- YHTEENVETO ---
+2026-02-03 12:43:12.512023: Käynnissä (2): python.exe, chrome.exe
+2026-02-03 12:43:12.512204: Ei käynnissä (1): ei_olemassa.exe
+2026-02-03 12:43:12.512402: === Tarkistus päättyi ===
+

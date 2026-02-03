@@ -1,0 +1,9 @@
+2026-02-03 12:06:41 - === Prosessitarkistus aloitettu ===
+2026-02-03 12:06:41 - Prosessi käynnissä: python.exe
+2026-02-03 12:06:41 - Prosessi käynnissä: chrome.exe
+2026-02-03 12:06:41 - Prosessia ei löydy: ei_olemassa.exe
+2026-02-03 12:06:41 - --- YHTEENVETO ---
+2026-02-03 12:06:41 - Löytyi: 2 kpl
+2026-02-03 12:06:41 - Puuttui: 1 kpl
+2026-02-03 12:06:41 - Virheitä: 0 kpl
+2026-02-03 12:06:41 - ===============================
