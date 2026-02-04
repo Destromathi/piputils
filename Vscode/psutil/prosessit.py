@@ -44,4 +44,4 @@ def tarkista_prosessit():
         f"Ei käynnissä ({len(puuttuvat)}): {', '.join(puuttuvat) or 'ei yhtään'}"
     )
 
-    kirjoita_loki("[PROSESSIT] Tarkistus päättyi\n")
+    kirjoita_loki("[PROSESSIT] Tarkistus valmis\n")

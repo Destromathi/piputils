@@ -14,4 +14,4 @@ def tarkista_muisti():
     except Exception as e:
         kirjoita_loki(f"[MUISTI] Virhe tarkistuksessa: {e}")
 
-    kirjoita_loki("[MUISTI] Tarkistus päättyi\n")
+    kirjoita_loki("[MUISTI] Tarkistus valmis\n")

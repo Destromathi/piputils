@@ -11,4 +11,4 @@ def tarkista_prosessori():
     except Exception as e:
         kirjoita_loki(f"[CPU] Virhe tarkistuksessa: {e}")
 
-    kirjoita_loki("[CPU] Tarkistus päättyi\n")
+    kirjoita_loki("[CPU] Tarkistus valmis\n")

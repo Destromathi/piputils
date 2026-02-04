@@ -17,4 +17,5 @@ for toiminto in (
             f"[PAASKRIPTI] Virhe toiminnossa {toiminto.__name__}: {e}"
         )
 
-kirjoita_loki("=== Resurssivalvonta päättyi ===\n")
+kirjoita_loki("=== Resurssivalvonta suoritettu ===\n")
+kirjoita_loki("================================\n")
