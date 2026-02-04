@@ -1,0 +1,18 @@
+2026-02-04 09:07:54.856870: === Resurssivalvonta käynnistyi ===
+2026-02-04 09:07:54.865314: [PROSESSIT] Tarkistus aloitettu
+2026-02-04 09:07:54.879583: [PROSESSIT] Käynnissä: python.exe
+2026-02-04 09:07:54.880372: [PROSESSIT] Ei käynnissä: chrome.exe
+2026-02-04 09:07:54.881910: [PROSESSIT] Ei käynnissä: ei_olemassa.exe
+2026-02-04 09:07:54.882659: [PROSESSIT] Yhteenveto – Käynnissä (1): python.exe, Ei käynnissä (2): chrome.exe, ei_olemassa.exe
+2026-02-04 09:07:54.883748: [PROSESSIT] Tarkistus päättyi
+
+2026-02-04 09:07:54.884456: [CPU] Tarkistus aloitettu
+2026-02-04 09:07:55.903429: [CPU] Käyttö: 10.5 %
+2026-02-04 09:07:55.905019: [CPU] Tarkistus päättyi
+
+2026-02-04 09:07:55.905703: [MUISTI] Tarkistus aloitettu
+2026-02-04 09:07:55.906834: [MUISTI] Käyttö: 74.2 % (3025 MB / 4076 MB)
+2026-02-04 09:07:55.907460: [MUISTI] Tarkistus päättyi
+
+2026-02-04 09:07:55.907895: === Resurssivalvonta päättyi ===
+
