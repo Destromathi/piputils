@@ -1,0 +1,6 @@
+{
+    "cpu_warning": 70,
+    "cpu_error": 90,
+    "memory_warning": 75,
+    "memory_error": 90
+}

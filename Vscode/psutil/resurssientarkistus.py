@@ -1,21 +1,18 @@
-from prosessit import tarkista_prosessit
-from prosessori import tarkista_prosessori
-from muisti import tarkista_muisti
+import prosessit
+import prosessori
+import muisti
 from yhteinen import kirjoita_loki
 
-kirjoita_loki("=== Resurssivalvonta käynnistyi ===")
+YHTEIS_LOKI = "resurssienvalvonta.log"
 
-for toiminto in (
-    tarkista_prosessit,
-    tarkista_prosessori,
-    tarkista_muisti
-):
+kirjoita_loki("=== Resurssien valvonta käynnistyi ===", YHTEIS_LOKI)
+
+for toiminto in (prosessit.tarkista_prosessit,
+                  prosessori.tarkista_suoritin,
+                  muisti.tarkista_muisti):
     try:
-        toiminto()
+        toiminto(loki_tiedosto=YHTEIS_LOKI)  # ohitetaan oletus ja käytetään yhteistä lokia
     except Exception as e:
-        kirjoita_loki(
-            f"[PAASKRIPTI] Virhe toiminnossa {toiminto.__name__}: {e}"
-        )
+        kirjoita_loki(f"[PAASKRIPTI] Virhe {toiminto.__name__}: {e}", YHTEIS_LOKI)
 
-kirjoita_loki("=== Resurssivalvonta suoritettu ===\n")
-kirjoita_loki("================================\n")
+kirjoita_loki("=== Resurssien valvonta valmis ===\n", YHTEIS_LOKI)

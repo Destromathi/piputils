@@ -1,0 +1,42 @@
+2026-02-04 10:32:23.437265: === Resurssien valvonta käynnistyi ===
+2026-02-04 10:32:23.438536: [PROSESSIT] Tarkistus aloitettu
+2026-02-04 10:32:23.445877: [PROSESSIT] Käynnissä: python.exe
+2026-02-04 10:32:23.446759: [PROSESSIT] Käynnissä: chrome.exe
+2026-02-04 10:32:23.447751: [PROSESSIT] Ei käynnissä: ei_olemassa.exe
+2026-02-04 10:32:23.448676: [PROSESSIT] Tarkistus valmis
+
+2026-02-04 10:32:23.449589: [CPU] Tarkistus aloitettu
+2026-02-04 10:32:24.398614: [CPU] Käyttö: 25.0 %
+2026-02-04 10:32:24.400469: [CPU] Tarkistus valmis
+
+2026-02-04 10:32:24.401340: [MUISTI] Tarkistus aloitettu
+2026-02-04 10:32:24.411546: [MUISTI] Käyttö: 80.8 % (3292 MB / 4076 MB)
+2026-02-04 10:32:24.412328: [MUISTI] Tarkistus valmis
+
+2026-02-04 10:32:24.412965: === Resurssien valvonta valmis ===
+
+2026-02-04 10:32:37.531992: === Resurssien valvonta käynnistyi ===
+2026-02-04 10:32:37.533163: [PROSESSIT] Tarkistus aloitettu
+2026-02-04 10:32:37.541762: [PROSESSIT] Käynnissä: python.exe
+2026-02-04 10:32:37.543053: [PROSESSIT] Käynnissä: chrome.exe
+2026-02-04 10:32:37.544351: [PROSESSIT] Ei käynnissä: ei_olemassa.exe
+2026-02-04 10:32:37.545273: [PROSESSIT] Tarkistus valmis
+
+2026-02-04 10:32:37.546186: [CPU] Tarkistus aloitettu
+2026-02-04 10:32:38.693759: [CPU] Käyttö: 20.3 %
+2026-02-04 10:32:38.695269: [CPU] Tarkistus valmis
+
+2026-02-04 10:32:38.696618: [MUISTI] Tarkistus aloitettu
+2026-02-04 10:32:38.697957: [MUISTI] Käyttö: 81.6 % (3324 MB / 4076 MB)
+2026-02-04 10:32:38.700595: [MUISTI] Tarkistus valmis
+
+2026-02-04 10:32:38.701020: === Resurssien valvonta valmis ===
+
+2026-02-04 13:30:39.110517: === Resurssien valvonta käynnistyi ===
+2026-02-04 13:30:39.113254: Aktiivisten prosessien määrä: 168
+2026-02-04 13:30:40.116759: 12.3% CPU käyttö
+2026-02-04 13:30:40.118123: 92.0% Muistin käyttö - ERROR
+2026-02-04 13:30:40.118870: === Resurssien valvonta valmis ===
+
+2026-02-04 13:32:40.730661: 28.6% CPU käyttö
+2026-02-04 13:32:52.133908: 28.9% CPU käyttö

@@ -1,0 +1,30 @@
+2026-02-04 10:29:40.324134: [PROSESSIT] Tarkistus aloitettu
+2026-02-04 10:29:40.333021: [PROSESSIT] Käynnissä: python.exe
+2026-02-04 10:29:40.333645: [PROSESSIT] Käynnissä: chrome.exe
+2026-02-04 10:29:40.334214: [PROSESSIT] Ei käynnissä: ei_olemassa.exe
+2026-02-04 10:29:40.334960: [PROSESSIT] Tarkistus valmis
+
+2026-02-04 10:30:34.918731: [PROSESSIT] Tarkistus aloitettu
+2026-02-04 10:30:34.929001: [PROSESSIT] Käynnissä: python.exe
+2026-02-04 10:30:34.929727: [PROSESSIT] Käynnissä: chrome.exe
+2026-02-04 10:30:34.931231: [PROSESSIT] Ei käynnissä: ei_olemassa.exe
+2026-02-04 10:30:34.932168: [PROSESSIT] Tarkistus valmis
+
+2026-02-04 10:32:23.438130: [PROSESSIT] Tarkistus aloitettu
+2026-02-04 10:32:23.445238: [PROSESSIT] Käynnissä: python.exe
+2026-02-04 10:32:23.446371: [PROSESSIT] Käynnissä: chrome.exe
+2026-02-04 10:32:23.447272: [PROSESSIT] Ei käynnissä: ei_olemassa.exe
+2026-02-04 10:32:23.448216: [PROSESSIT] Tarkistus valmis
+
+2026-02-04 10:32:37.532729: [PROSESSIT] Tarkistus aloitettu
+2026-02-04 10:32:37.541014: [PROSESSIT] Käynnissä: python.exe
+2026-02-04 10:32:37.542543: [PROSESSIT] Käynnissä: chrome.exe
+2026-02-04 10:32:37.543609: [PROSESSIT] Ei käynnissä: ei_olemassa.exe
+2026-02-04 10:32:37.544787: [PROSESSIT] Tarkistus valmis
+
+2026-02-04 10:32:58.098590: [PROSESSIT] Tarkistus aloitettu
+2026-02-04 10:32:58.106625: [PROSESSIT] Käynnissä: python.exe
+2026-02-04 10:32:58.107441: [PROSESSIT] Käynnissä: chrome.exe
+2026-02-04 10:32:58.107982: [PROSESSIT] Ei käynnissä: ei_olemassa.exe
+2026-02-04 10:32:58.108520: [PROSESSIT] Tarkistus valmis
+

@@ -1,10 +1,17 @@
 from pathlib import Path
 from datetime import datetime
+import json
 
 LOKIKANSIO = Path("lokit")
-LOKITIEDOSTO = "resurssivalvonta.log"
 
-def kirjoita_loki(viesti):
+def kirjoita_loki(viesti, tiedosto):
+    """Kirjoittaa viestin lokitiedostoon lokit-kansioon"""
     LOKIKANSIO.mkdir(exist_ok=True)
-    with open(LOKIKANSIO / LOKITIEDOSTO, "a", encoding="utf-8") as loki:
-        loki.write(f"{datetime.now()}: {viesti}\n")
+    polku = LOKIKANSIO / tiedosto
+    with open(polku, "a", encoding="utf-8") as f:
+        f.write(f"{datetime.now()}: {viesti}\n")
+
+def lue_asetukset():
+    """Lataa asetukset config.json tiedostosta"""
+    with open("config.json", "r", encoding="utf-8") as tiedosto:
+        return json.load(tiedosto)
