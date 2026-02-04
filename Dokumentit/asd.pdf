@@ -1,0 +1,26 @@
+Write-Host "1 - Siirra Kuvat"
+Write-Host "2 - Siirra Videot"
+Write-Host "3 - Siirra Musiikki"
+Write-Host "4 - Siirra Dokumentit"
+Write-Host "5 - Siirra Data"
+Write-Host "6 -Siirra Asennukset"
+Write-Host "Siirra Kaikki	
+Write-Host "0 Poistu"
+
+
+switch ($valinta)
+	"1" {Siirra-Kuvat}
+	"2" {Siirra-Videot}
+	"3" {Siirra-Musiikki}
+	"4" {Siirra-Dokumentit}
+	"5" {Siirra-Data}
+	"6" {Siirra-Asennukset}
+	"7" {Siirra-Kuvat
+			Siirra-Videot
+			Siirra-Musiikki
+			Siirra-Dokumentit
+			Siirra-Data
+			Siirra-Asennukset
+			}
+	"0" {exit}
+	default {Write-Host "Virheellinen valinta"}

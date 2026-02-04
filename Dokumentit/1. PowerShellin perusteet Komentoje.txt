@@ -1,0 +1,140 @@
+1. PowerShellin perusteet: Komentojen suorittaminen
+
+a. Ero Write-Outputin ja Write-Hostin välillä:
+Write-Output kirjoittaa tiedon komentoputkeen ja voi palauttaa arvon, joka voidaan käyttää myöhemmin.
+
+Write-Host kirjoittaa tiedon suoraan konsoliin eikä palauta arvoa komentoputkeen.
+
+b. Tehtävä: Kirjoita skripti, joka tulostaa käyttäjän nimen ja järjestelmän kellonajan.
+
+# Haetaan käyttäjän nimi ja kellonaika
+$user = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+$time = Get-Date
+# Tulostetaan tiedot
+Write-Host "Käyttäjän nimi: $user"
+Write-Host "Kellonaika: $time"
+
+2. Tiedostojen ja kansioiden hallinta
+Luo PowerShell-skripti, joka:
+Luo uuden kansion käyttäjän työpöydälle.
+Luo kolme tekstitiedostoa kyseiseen kansioon.
+Lisää tekstitiedostoihin sisältöä.
+
+# Määritellään kansion polku työpöydällä
+$folderPath = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), 'TestiKansio')
+# Luo uusi kansio
+New-Item -Path $folderPath -ItemType Directory
+# Luo ja lisää sisältöä kolmeen tiedostoon
+1..3 | ForEach-Object {
+    $fileName = "TestiTiedosto$_.txt"
+    $filePath = [System.IO.Path]::Combine($folderPath, $fileName)
+    "Tämä on testi" | Out-File -FilePath $filePath
+}
+
+3. Tietojen suodatus ja käsittely
+Käytä Get-Process-komentoa ja suodata prosessit esimerkiksi nimen tai muistinkäytön mukaan.
+
+Tehtävä: Tee skripti, joka hakee kaikki prosessit, joiden muistinkäyttö on yli 50 MB, ja tallentaa niiden tiedot CSV-tiedostoon.
+
+# Hakee prosessit, joiden muistinkäyttö on yli 50 MB
+$largeProcesses = Get-Process | Where-Object { $_.WorkingSet -gt 50MB }
+# Tallentaa tiedot CSV-tiedostoon
+$largeProcesses | Select-Object Name, Id, @{Name="MemoryUsage(MB)";Expression={($_.WorkingSet / 1MB).ToString("0.00")}} | Export-Csv -Path "C:\temp\LargeProcesses.csv" -NoTypeInformation
+
+4. Silmukat ja ehdot
+Luo PowerShell-skripti, joka tarkistaa tietyn kansion tiedostot:
+Jos tiedoston koko on yli 1 MB, tulosta tiedoston nimi ja koko.
+Muuten tulosta "Pieni tiedosto: [tiedoston nimi]".
+
+# Määritellään kansion polku
+$folderPath = "C:\Testikansio"
+# Haetaan kansion tiedostot
+Get-ChildItem -Path $folderPath | ForEach-Object {
+    if ($_.Length -gt 1MB) {
+        Write-Host "Tiedosto: $($_.Name) - Koko: $([math]::Round($_.Length / 1MB, 2)) MB"
+    } else {
+        Write-Host "Pieni tiedosto: $($_.Name)"
+    }
+}
+
+5. Käyttäjän syötteen käsittely
+Tee skripti, joka kysyy käyttäjältä tiedostonimen ja etsii sen tiedostojärjestelmästä.
+Tulosta tiedoston koko ja viimeisin muokkauspäivämäärä.
+
+# Kysy käyttäjältä tiedoston nimi
+$fileName = Read-Host "Anna tiedoston nimi"
+# Etsi tiedosto
+$file = Get-ChildItem -Path "C:\" -Recurse -Filter $fileName -ErrorAction SilentlyContinue
+# Tarkista, löytyikö tiedosto
+if ($file) {
+    Write-Host "Tiedoston koko: $([math]::Round($file.Length / 1MB, 2)) MB"
+    Write-Host "Viimeisin muokkauspäivämäärä: $($file.LastWriteTime)"
+} else {
+    Write-Host "Tiedostoa ei löytynyt."
+}
+
+6. Yksinkertainen järjestelmämonitori
+PowerShell-skripti, joka:
+Näyttää tietoa järjestelmän suorituskyvystä (esim. CPU-käyttö, muistin käyttö).
+Tulostaa tiedot käyttäjälle ja tallentaa lokitiedostoon.
+
+# Hakee järjestelmän suorituskykytiedot
+$cpuUsage = (Get-WmiObject Win32_Processor).LoadPercentage
+$memoryUsage = (Get-WmiObject Win32_OperatingSystem).FreePhysicalMemory
+
+# Tallentaa lokitiedostoon
+$logPath = "C:\temp\systemMonitorLog.txt"
+$logEntry = "CPU käyttö: $cpuUsage%, Vapaata muistia: $([math]::Round($memoryUsage / 1MB, 2)) MB"
+Add-Content -Path $logPath -Value "$logEntry - $((Get-Date).ToString('yyyy-MM-dd HH:mm:ss'))"
+
+# Näyttää tiedot käyttäjälle
+Write-Host $logEntry
+
+7. Funktiot ja modulaarisuus
+Kirjoita funktio, joka laskee kahden luvun summan.
+Laajenna skripti niin, että se tarjoaa käyttäjälle yksinkertaisen laskimen, jossa voi valita toiminnon (summa, vähennyslasku, tulo, jakolasku).
+
+# Funktio kahden luvun summalle
+function Add-Numbers {
+    param ($num1, $num2)
+    return $num1 + $num2
+}
+
+# Yksinkertainen laskin
+$operation = Read-Host "Valitse laskutoimitus (summa, vähennyslasku, tulo, jakolasku)"
+$num1 = Read-Host "Anna ensimmäinen luku"
+$num2 = Read-Host "Anna toinen luku"
+
+switch ($operation.ToLower()) {
+    'summa' { Write-Host "Tulos: $(Add-Numbers $num1 $num2)" }
+    'vähennyslasku' { Write-Host "Tulos: $($num1 - $num2)" }
+    'tulo' { Write-Host "Tulos: $($num1 * $num2)" }
+    'jakolasku' { 
+        if ($num2 -eq 0) {
+            Write-Host "Ei voi jakaa nollalla!"
+        } else {
+            Write-Host "Tulos: $($num1 / $num2)"
+        }
+    }
+    default { Write-Host "Tuntematon toiminto" }
+}
+
+8. Pikatehtävä: PowerShell-käyttöjärjestelmätieto
+Luo skripti, joka tulostaa seuraavat tiedot:
+Käyttöjärjestelmän nimi
+Käynnissä olevien käyttäjien lukumäärä
+Järjestelmän käynnistysaika
+
+# Hakee käyttöjärjestelmän nimen
+$osName = (Get-WmiObject Win32_OperatingSystem).Caption
+
+# Hakee käynnissä olevien käyttäjien lukumäärän
+$usersCount = (Get-WmiObject Win32_ComputerSystem).UserName
+
+# Hakee järjestelmän käynnistysajan
+$uptime = (Get-WmiObject Win32_OperatingSystem).LastBootUpTime
+
+# Tulostaa tiedot
+Write-Host "Käyttöjärjestelmä: $osName"
+Write-Host "Käynnissä olevat käyttäjät: $usersCount"
+Write-Host "Järjestelmän käynnistysaika: $uptime"

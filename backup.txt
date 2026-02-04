@@ -1,0 +1,41 @@
+param (
+    [string]$LahdeKansio   = "C:\tehtavat\Data",
+    [string]$VarmuusKansio = "C:\tehtavat\Varmuuskopio"
+)
+
+function Kirjoita-Loki {
+    param (
+        [string]$Viesti,
+        [string]$Tiedosto = "loki.txt"
+    )
+
+    "$((Get-Date).ToString('yyyy-MM-dd HH:mm:ss')) - $Viesti" |
+        Out-File $Tiedosto -Append
+}
+
+function Tee-Varmuuskopio {
+    param (
+        [string]$Source,
+        [string]$Destination
+    )
+
+    Kirjoita-Loki "Aloitetaan backup"
+
+    if (-not (Test-Path $Destination)) {
+        New-Item -ItemType Directory -Path $Destination | Out-Null
+        Kirjoita-Loki "Varmuuskansio luotu: $Destination"
+    }
+
+    try {
+        Copy-Item -Path "$Source\*" -Destination $Destination -Recurse -Force -ErrorAction Stop
+        Kirjoita-Loki "Varmuuskopiointi valmis"
+    }
+    catch {
+        Kirjoita-Loki "Virhe varmuuskopioinnissa"
+    }
+}
+
+Kirjoita-Loki "Skripti OK"
+Kirjoita-Loki "Tarkistetaan kansio"
+
+Tee-Varmuuskopio -Source $LahdeKansio -Destination $VarmuusKansio

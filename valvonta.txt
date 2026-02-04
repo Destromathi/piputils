@@ -1,0 +1,47 @@
+ param (
+    [Parameter(Mandatory = $true)]
+    [string]$Kansio,
+
+    [string]$Raportti = "raportti.txt"
+)
+
+# --- Loki-funktio ---
+function Kirjoita-Raportti {
+    param ([string]$Viesti)
+    # Lisätään yksi tyhjä rivi viestin jälkeen
+    "$Viesti`r`n" | Out-File $Raportti -Append -Encoding Unicode
+}
+
+try {
+    $AloitusAika = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    
+    if (Test-Path -Path $Kansio -PathType Container) {
+        # Lasketaan tiedostojen määrä
+        $TiedostoMaara = (Get-ChildItem -Path $Kansio -File -ErrorAction SilentlyContinue | Measure-Object).Count
+        $Tila = "Onnistui"
+    } else {
+        $TiedostoMaara = 0
+        $Tila = "Epäonnistui"
+    }
+
+    $Sisalto = @"
+[INFO]
+Aloitus: $AloitusAika
+Kansio: $Kansio
+Tiedostojen määrä: $TiedostoMaara
+Skriptin tila: $Tila
+Lopetettu
+"@
+
+} catch {
+    $Sisalto = @"
+[ERROR]
+Aloitus: $((Get-Date).ToString('yyyy-MM-dd HH:mm:ss'))
+Kansio: $Kansio
+Tiedostojen määrä: 0
+Skriptin tila: Epäonnistui
+Lopetettu
+"@
+}
+
+Kirjoita-Raportti $Sisalto
