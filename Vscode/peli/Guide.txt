@@ -1,0 +1,115 @@
+# EPIC SEIKKAILU
+
+Tämä seikkailu on synkkä ja eeppinen matka pelon, rohkeuden ja selviytymisen läpi.
+Pelaaja kulkee vaarallisesta maailmasta toiseen, kohdaten yhä kovempia vihollisia ja lopulta kohtaamalla koko tarinan ytimessä olevan pahuuden.
+
+Käytä kirjoitusta tehdäksesi toiminnot pelissä, kuten hyökkää ja paranna, pue eeppisemmät varusteet kirjoittamalla ensin inventory, sitten equip ja valitse listasta mitä haluat
+kantaa mukanasi pahuutta vastaan
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 1. Grimhall Village – Lähtöpaikka
+
+Seikkailu alkaa Grimhallin kylästä. Kylä vaikuttaa rauhalliselta, mutta jokin on pahasti vialla. Kyläläiset ovat hiljaisia ja peloissaan – he tietävät, että pimeys leviää.
+
+**Tavoite:**
+
+* Aisti uhkaava tunnelma
+* Valmistaudu matkalle
+
+Täältä ei löydy vihollisia, mutta tämä on viimeinen turvallinen paikka pitkään aikaan.
+(Jos tarkkoja ollaan, niin koko pelissä)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 2. Darkwood – Varjojen metsä
+
+Kylän ulkopuolella alkaa Darkwood: tiheä, synkkä metsä, jossa mikään ei ole sitä miltä näyttää. Jokin seuraa sinua puiden lomasta.
+
+**Mahdolliset viholliset:**
+
+* Goblin
+* Forest Spider
+* Wolf
+
+**Tavoite:**
+
+* Selviydy ensimmäisistä taisteluista
+* Opettele taistelumekaniikat
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 3. Cave – Kylmä pimeys
+
+Metsän uumenista löydät luolan. Sen sisällä ilma on raskas ja täynnä kuoleman hajua. Äänet kantautuvat seinistä, eikä ole selvää oletko yksin.
+
+**Mahdolliset viholliset:**
+
+* Cave Spider
+* Bat Swarm
+* Giant Rat
+
+**Tavoite:**
+
+* Selviydy ahtaissa tiloissa
+* Varaudu entistä vaarallisempiin alueisiin
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 4. Tundra – Jäätävä erämaa
+
+Luolasta noustuasi saavut tundralle. Loputon valkoinen helvetti testaa kestävyytesi. Kylmyys tappaa hitaasti – ja pedot vaanivat lumen alla.
+
+**Mahdolliset viholliset:**
+
+* Ice Bear
+* Frost Wolf
+* Snow Spider
+
+**Tavoite:**
+
+* Selviydy äärimmäisissä olosuhteissa
+* Todista olevasi sankari, et vain selviytyjä
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 5. Old Castle – Kirotut rauniot
+
+Kaukaa näkyvät vanhan linnan rauniot. Ne kätkevät synkän historian ja vartijoita, jotka eivät ole koskaan päässeet lepäämään.
+
+**Mahdolliset viholliset:**
+
+* Castle Guard
+* Armored Knight
+* Dark Archer
+
+**Tavoite:**
+
+* Murtaudu linnan sisään
+* Lähesty pahuutta sen omalla maaperällä
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## 6. Abandoned Dungeon – Loppukoitos
+
+Linnan alla odottaa hylätty vankityrmä. Tämä on kaiken alku ja loppu. Pimeyden herra odottaa.
+
+**Päävihollinen (Boss):**
+
+* Castle Lord "Ironhand"
+
+**Tavoite:**
+
+* Kukista Ironhand
+* Vapauta maailma kirouksesta
+* Selviydy eeppisestä lopputaistelusta
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## LOPPU
+
+Jos Ironhand kaatuu, pahuuden ote murtuu. Grimhallin kylä voi jälleen hengittää vapaasti – ja sankarin nimi jää elämään legendoissa.
+
+Mutta jos epäonnistut… pimeys leviää kaikkialle.
+
+**Onnea matkaan, sankari.** ⚔️❄️🕯️

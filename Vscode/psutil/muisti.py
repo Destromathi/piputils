@@ -2,6 +2,7 @@ import psutil
 from yhteinen import kirjoita_loki, lue_asetukset
 
 def tarkista_muisti(loki_tiedosto="muisti.log"):
+    
     muisti = psutil.virtual_memory()
     asetukset = lue_asetukset()
 

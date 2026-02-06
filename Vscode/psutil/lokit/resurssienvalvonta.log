@@ -40,3 +40,21 @@
 
 2026-02-04 13:32:40.730661: 28.6% CPU käyttö
 2026-02-04 13:32:52.133908: 28.9% CPU käyttö
+2026-02-04 13:35:11.146568: === Resurssien valvonta käynnistyi ===
+2026-02-04 13:35:11.147207: Aktiivisten prosessien määrä: 168
+2026-02-04 13:35:12.151330: 7.3% CPU käyttö
+2026-02-04 13:35:12.152087: 89.5% Muistin käyttö - WARNING
+2026-02-04 13:35:12.152569: === Resurssien valvonta valmis ===
+
+2026-02-04 13:35:45.532275: === Resurssien valvonta käynnistyi ===
+2026-02-04 13:35:45.533064: Aktiivisten prosessien määrä: 168
+2026-02-04 13:35:46.536887: 21.5% CPU käyttö
+2026-02-04 13:35:46.538496: 89.4% Muistin käyttö - WARNING
+2026-02-04 13:35:46.538977: === Resurssien valvonta valmis ===
+
+2026-02-04 13:37:56.134511: === Resurssien valvonta käynnistyi ===
+2026-02-04 13:37:56.137222: Aktiivisten prosessien määrä: 171
+2026-02-04 13:37:57.159561: 24.4% CPU käyttö
+2026-02-04 13:37:57.162107: 82.5% Muistin käyttö - WARNING
+2026-02-04 13:37:57.162579: === Resurssien valvonta valmis ===
+
